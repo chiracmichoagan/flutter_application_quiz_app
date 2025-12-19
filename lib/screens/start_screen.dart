@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 
 class StartScreen extends StatelessWidget {
-  const StartScreen(this.startQuiz, {super.key, });
+  const StartScreen(this.startQuiz, {super.key});
 
   final void Function()? startQuiz;
 
@@ -11,10 +11,10 @@ class StartScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('assets/images/images.png', width: 300),
+          Image.asset('assets/images/logo.png', width: 300),
           const SizedBox(height: 80),
           const Text(
-            'Learn Flutter the fun way!',
+            'App Quiz Flutter',
             style: TextStyle(fontSize: 24, color: Colors.white),
           ),
           const SizedBox(height: 30),

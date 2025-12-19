@@ -28,10 +28,11 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
 
     return Center(
       child: Container(
-        margin: const EdgeInsets.all(40),
+        margin: const EdgeInsets.all(100),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
+
           children: [
             Text(
               textAlign: TextAlign.center,
@@ -44,11 +45,14 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             ),
             const SizedBox(height: 30),
             ...currentQuestion.getShuffledAnswers().map((answer) {
-              return AnswerButton(
-                onTap: () {
-                  answerQuestion(answer);
-                },
-                text: answer,
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: AnswerButton(
+                  onTap: () {
+                    answerQuestion(answer);
+                  },
+                  text: answer,
+                ),
               );
             }),
           ],
